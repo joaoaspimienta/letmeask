@@ -39,7 +39,7 @@ export function Home() {
         return;
       }
 
-      history.push(`/rooms/${roomCode}`);
+      history.push(`/rooms/${roomCode}`)
     }
 
     return (
@@ -53,7 +53,7 @@ export function Home() {
               <div className="main-content">
                   <img src={logoImg} alt="Letmeask"/>
                   <button onClick={handleCreateRoom} className="create-room">
-                   <img src={googleIconImg} alt="Logo do Google"/>
+                   '1'   <img src={googleIconImg} alt="Logo do Google"/>
                       Crie sua sala com o Google
                   </button>
                   <div className="separator">ou entre em uma sala</div>

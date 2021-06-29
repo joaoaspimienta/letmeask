@@ -9,7 +9,6 @@ import '../styles/auth.scss'
 import { useAuth } from '../hooks/useAuth';
 import { FormEvent } from 'react'
 import { useState } from 'react'
-import { database } from '../services/firebase'
 
 
 export function Home() {
@@ -28,18 +27,7 @@ export function Home() {
     async function handleJoinRoom(event: FormEvent) {
       event.preventDefault();
 
-      if (roomCode.trim() === '') {
-        return;
-      }
-
-      const roomRef = await database.ref(`rooms/${roomCode}`).get();
-
-      if(!roomRef.exists()) {
-        alert('Room does not exist.');
-        return;
-      }
-
-      history.push(`/rooms/${roomCode}`);
+      
     }
 
     return (
@@ -53,7 +41,7 @@ export function Home() {
               <div className="main-content">
                   <img src={logoImg} alt="Letmeask"/>
                   <button onClick={handleCreateRoom} className="create-room">
-                   <img src={googleIconImg} alt="Logo do Google"/>
+                   '1'   <img src={googleIconImg} alt="Logo do Google"/>
                       Crie sua sala com o Google
                   </button>
                   <div className="separator">ou entre em uma sala</div>

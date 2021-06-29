@@ -10,7 +10,6 @@ import { useAuth } from '../hooks/useAuth'
 
 import '../styles/auth.scss'
 
-
 export function NewRoom() {
   const { user } = useAuth();
   const history = useHistory();
@@ -30,7 +29,7 @@ export function NewRoom() {
       authorId: user?.id,
     })
 
-    history.push(`/rooms/${firebaseRoom.key}`)
+    history.push()
   }
   
   return (

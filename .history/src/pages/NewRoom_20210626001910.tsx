@@ -9,6 +9,7 @@ import { database } from '../services/firebase'
 import { useAuth } from '../hooks/useAuth'
 
 import '../styles/auth.scss'
+import '../styles/room.scss';
 
 
 export function NewRoom() {
